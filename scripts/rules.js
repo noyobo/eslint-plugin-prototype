@@ -8,12 +8,12 @@ const fs = require("fs")
 const path = require("path")
 const libRoot = path.resolve(__dirname, "../lib/rules")
 const categories = {
-    ES2019: { id: "ES2019", rules: [], noConfig: true },
-    ES2018: { id: "ES2018", rules: [] },
-    ES2017: { id: "ES2017", rules: [] },
+    // ES2019: { id: "ES2019", rules: [], noConfig: true },
+    // ES2018: { id: "ES2018", rules: [] },
+    // ES2017: { id: "ES2017", rules: [] },
     ES2016: { id: "ES2016", rules: [] },
     ES2015: { id: "ES2015", rules: [] },
-    ES5: { id: "ES5", rules: [] },
+    // ES5: { id: "ES5", rules: [] },
 }
 const rules = []
 let files = fs.readdirSync(libRoot)
@@ -24,7 +24,6 @@ for (const filename of files) {
     const filePath = path.join(libRoot, filename)
     const content = fs.readFileSync(filePath, "utf8")
     const category = /category:[\s\n]+"(.+)"/.exec(content)[1]
-    console.log(category)
     const description = /description:[\s\n]+"(.+?)\.?"/.exec(content)[1]
     const fixable = /fixable:[\s\n]+"(.+)"/.test(content)
     const rule = {

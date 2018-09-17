@@ -1,18 +1,18 @@
 extends:
-    - plugin:@noyobo/es2015
-    - plugin:@noyobo/+eslint-plugin
+  - plugin:@mysticatea/es2015
+  - plugin:@mysticatea/+eslint-plugin
 
 overrides:
-    - files: lib/rules/*.js
-      rules:
-          "@noyobo/eslint-plugin/require-meta-docs-url":
-              - error
-              - pattern: http://noyobo.github.io/eslint-plugin-prototype/rules/{{name}}.html
+  - files: lib/rules/*.js
+    rules:
+      "@mysticatea/eslint-plugin/require-meta-docs-url":
+        - error
+        - pattern: http://mysticatea.github.io/eslint-plugin-es/rules/{{name}}.html
 
-    - files: scripts/*.js
-      rules:
-          require-jsdoc: off
+  - files: scripts/*.js
+    rules:
+      require-jsdoc: off
 
-    - files: "*.vue"
-      parserOptions:
-          parser: babel-eslint
+  - files: "*.vue"
+    parserOptions:
+      parser: babel-eslint

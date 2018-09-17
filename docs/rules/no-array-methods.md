@@ -1,11 +1,20 @@
-# disallow the `Array.ptototype.*` methods (prototype/no-array-methods)
+# disallow the `Array.ptototype.includes` methods (ptototype/no-array-methods)
 
 This rule reports ES2015 `Array.ptototype.*` method as errors.
 
 ## Rule Options
 
 ```js
-"prototype/no-array-methods": [<enabled>, ["includes", "copyWithin", "keys", "values", "entries"]]
+"prototype/no-array-methods": [
+  <enabled>,
+  [
+    "includes",
+    "copyWithin",
+    "keys",
+    "values",
+    "entries"
+  ]
+]
 ```
 
 ## Examples
@@ -17,5 +26,5 @@ array.includes(1);
 
 ## 📚 References
 
--   [Rule source](https://github.com/noyobo/eslint-plugin-prototype/blob/v1.3.1/lib/rules/no-array-methods.js)
--   [Test source](https://github.com/noyobo/eslint-plugin-prototype/blob/v1.3.1/tests/lib/rules/no-array-methods.js)
+- [Rule source](https://github.com/noyobo/eslint-plugin-prototype/blob/v1.0.0/lib/rules/no-array-methods.js)
+- [Test source](https://github.com/noyobo/eslint-plugin-prototype/blob/v1.0.0/tests/lib/rules/no-array-methods.js)

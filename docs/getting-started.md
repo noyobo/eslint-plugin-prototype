@@ -22,17 +22,12 @@ For example, to enable only Rest/Spread Properties in ES2018, as similar to lega
 
 ```json
 {
-    "plugins": ["es"],
+    "plugins": ["prototype"],
     "parserOptions": {
         "ecmaVersion": 2018
     },
     "rules": {
-        "es/no-async-iteration": "error",
-        "es/no-malformed-template-literals": "error",
-        "es/no-regexp-lookbehind-assertions": "error",
-        "es/no-regexp-named-capture-groups": "error",
-        "es/no-regexp-s-flag": "error",
-        "es/no-regexp-unicode-property-escapes": "error"
+        "prototype/no-array-motheds": "error"
     }
 }
 ```
@@ -41,25 +36,22 @@ For example, to enable only Rest/Spread Properties in ES2018, as similar to lega
 
 This plugin provides the following configs.
 
-| Config ID           | Description                                    |
-| :------------------ | :--------------------------------------------- |
-| `plugin:es/no-2018` | enable all rules which disallow ES2018 syntax. |
-| `plugin:es/no-2017` | enable all rules which disallow ES2017 syntax. |
-| `plugin:es/no-2016` | enable all rules which disallow ES2016 syntax. |
-| `plugin:es/no-2015` | enable all rules which disallow ES2015 syntax. |
-| `plugin:es/no-5`    | enable all rules which disallow ES5 syntax.    |
+| Config ID                  | Description                                    |
+| :------------------------- | :--------------------------------------------- |
+| `plugin:prototype/no-2016` | enable all rules which disallow ES2016 syntax. |
+| `plugin:prototype/no-2015` | enable all rules which disallow ES2015 syntax. |
 
 For example:
 
 ```json
 {
-    "plugins": ["es"],
+    "plugins": ["prototype"],
     "parserOptions": {
         "ecmaVersion": 2018
     },
-    "extends": ["eslint:recommended", "plugin:es/no-2018"],
+    "extends": ["eslint:recommended", "plugin:prototype/no-2016"],
     "rules": {
-        "es/no-rest-spread-properties": "off"
+        "prototype/no-array-motheds": "off"
     }
 }
 ```

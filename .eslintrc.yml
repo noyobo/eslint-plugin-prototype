@@ -1,0 +1,18 @@
+extends:
+    - plugin:@noyobo/es2015
+    - plugin:@noyobo/+eslint-plugin
+
+overrides:
+    - files: lib/rules/*.js
+      rules:
+          "@noyobo/eslint-plugin/require-meta-docs-url":
+              - error
+              - pattern: http://noyobo.github.io/eslint-plugin-prototype/rules/{{name}}.html
+
+    - files: scripts/*.js
+      rules:
+          require-jsdoc: off
+
+    - files: "*.vue"
+      parserOptions:
+          parser: babel-eslint
